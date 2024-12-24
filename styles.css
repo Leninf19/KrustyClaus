@@ -1,0 +1,538 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #1e3a8a, #3b82f6);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 50px 20px;
+    position: relative;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c7d2fe;
+}
+
+.hero {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .primary {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.cta-buttons .primary:hover {
+    background: #60a5fa;
+}
+
+.cta-buttons .secondary {
+    background: #fff;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.cta-buttons .secondary:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+
+/* Add square box style to sections below "How It Works" */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0; /* Remove rounded corners to make it square */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    border: 2px solid #fff; /* Add a white border to the box */
+    text-align: center; /* Center text inside the box */
+}
+
+/* Specific adjustments to tokenomics section */
+#tokenomics {
+    border-color: #60a5fa; /* Light blue border to match theme */
+    padding: 40px 30px;
+}
+
+/* Specific adjustments to community section */
+#community {
+    border-color: #fcd34d; /* Yellow border for contrast */
+    padding: 40px 30px;
+}
+
+/* Adjust the steps to have square boxes in "How It Works" */
+.steps .step {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0; /* Square corners */
+    border: 2px solid #fff; /* Add a white border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 10px;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Style for images under each step */
+.step-image {
+    width: 100%; /* Make the image fill the width of the step box */
+    max-width: 300px; /* Optional: Limit the max width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between the text and image */
+    border-radius: 10px; /* Optional: Adds rounded corners to images */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+}
+
+/* Add some extra space between each step */
+.steps .step {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Stack the elements (title, text, image) vertically */
+    align-items: center; /* Center align the content */
+}
+
+/* Hero Section */
+header {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 1;
+    height: 60vh;  /* Adjusted to keep it smaller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centers the text vertically */
+}
+
+/* Hero Image */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.7;
+}
+
+/* Christmas Lights Divider */
+.christmas-lights-divider {
+    position: relative;
+    height: 60px;
+    background: transparent;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.christmas-lights-divider:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/dividerlights.png') repeat-x; /* Add the image path for Christmas lights */
+    background-size: auto 100%;
+}
+
+
+/* Snow Pile */
+.snow-pile {
+    position: absolute;
+    bottom: -10px; /* Adjust position for snow effect */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: url('images/snowpile.png') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* Hero Text */
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: #ffdf00;  /* Christmas Gold color for text */
+    font-family: 'Cursive', sans-serif; /* Adding a more festive font */
+}
+
+/* Hero Heading */
+.hero-text h1 {
+    font-size: 3rem;  /* Increased size for more impact */
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6), 0 0 25px #ff0000, 0 0 5px darkred; /* Red shadow for festive effect */
+}
+
+/* Hero Paragraph */
+.hero-text p {
+    font-size: 1.5rem;  /* Increased size for readability */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Darker text shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Call to Action Buttons */
+.cta-buttons .btn {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .primary {
+    background: #60a5fa;  /* Festive blue */
+    color: white;
+}
+
+.cta-buttons .primary:hover {
+    background: #3b82f6;
+}
+
+.cta-buttons .secondary {
+    background: #fff;
+    color: #ff0000;  /* Christmas red */
+    border: 2px solid #ff0000;
+}
+
+.cta-buttons .secondary:hover {
+    background: #ff0000;
+    color: #fff;
+}
+
+/* Main Sections */
+main section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center; /* Center all text in these sections */
+}
+
+/* Remove background and box shadow from sections */
+main section {
+    background: none; /* No background color */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove box shadow */
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center; /* Center steps */
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center social links */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #c7d2fe;
+}
+
+.krusty-description {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.krusty-description h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.krusty-description p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* About Section */
+#about .about-content {
+    display: flex;
+    justify-content: flex-start;  /* Align content to the left */
+    align-items: center;
+    gap: 20px;
+    text-align: left;  /* Ensure text is left-aligned */
+}
+
+#about .about-content img {
+    max-width: 300px;  /* Adjust image size */
+    border-radius: 10px;  /* Optional: adds rounded corners to the image */
+    object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+}
+
+#about p {
+    flex: 1;  /* This makes sure the paragraph takes the remaining space */
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+/* Button Hover Effects */
+.button:hover {
+    background-color: #60a5fa;
+    transform: scale(1.05);
+}
+
+/* Individual Button Colors */
+.buy-now {
+    background-color: #34d399; /* Green */
+}
+
+.buy-now:hover {
+    background-color: #2e9d68;
+}
+
+.track-stock {
+    background-color: #f59e0b; /* Orange */
+}
+
+.track-stock:hover {
+    background-color: #d97706;
+}
+
+/* Step Image */
+.step-image {
+    width: 100%;
+    max-width: 150px; /* Adjust size */
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.step-image:hover {
+    transform: scale(1.1);
+}
+
+/* Step Container */
+.step {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px;
+    border-radius: 10px;
+}
+
+
+/* Step Image */
+.step-image {
+    width: 100%;
+    max-width: 150px; /* Adjust size */
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.step-image:hover {
+    transform: scale(1.1);
+}
+
+/* Step Container */
+.step {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px;
+    border-radius: 10px;
+}
+
+
+/* Snowflake Effect */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10%; /* Start above the viewport */
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: 6s;
+}
+
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(7) {
+    left: 70%;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+
+.snowflake:nth-child(8) {
+    left: 80%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(9) {
+    left: 90%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        opacity: 0.5;
+    }
+}
